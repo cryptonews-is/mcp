@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "is.cryptonews/news",
+  "title": "cryptonews.is",
+  "description": "Live crypto news from 1,000+ sources, grouped into stories, in 28 languages, with news sentiment.",
+  "version": "1.0.1",
+  "websiteUrl": "https://mcp.cryptonews.is/?utm_source=mcp-registry&utm_campaign=mcp-listing",
+  "icons": [
+    {
+      "src": "https://mcp.cryptonews.is/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.cryptonews.is/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer <API key>' from your account page. Leave empty to sign in with OAuth by email instead.",
+          "isRequired": false,
+          "isSecret": true,
+          "placeholder": "Bearer cnis_live_..."
+        }
+      ]
+    }
+  ]
+}

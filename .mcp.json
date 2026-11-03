@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cryptonews": {
+      "type": "http",
+      "url": "https://mcp.cryptonews.is/mcp"
+    }
+  }
+}
