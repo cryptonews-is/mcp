@@ -3,8 +3,12 @@
   "name": "is.cryptonews/news",
   "title": "cryptonews.is",
   "description": "Live crypto news from 1,000+ sources, grouped into stories, in 28 languages, with news sentiment.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://mcp.cryptonews.is/?utm_source=mcp-registry&utm_campaign=mcp-listing",
+  "repository": {
+    "url": "https://github.com/cryptonews-is/mcp",
+    "source": "github"
+  },
   "icons": [
     {
       "src": "https://mcp.cryptonews.is/icon-512.png",
