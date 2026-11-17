@@ -17,16 +17,21 @@ Every tool is read-only.
 
 | Tool | What it returns | Plans |
 | --- | --- | --- |
+| `get_brief` | The daily brief of a completed day: a short cited write-up, the day's closing sentiment and its top stories | All |
 | `latest_stories` | Ranked current stories, each with its coins, category, sentiment and how many outlets cover it | All |
 | `get_sentiment` | The news sentiment reading (15 minutes to 24 hours) and the stories driving it | All |
 | `get_market` | Market quotes, top coins, total market cap and coins named in current stories | All |
+| `get_technicals` | Technical readings for ten large coins (trend, momentum, stretch; today, this week, this month), with the signals behind them on Standard and Pro. Signals, not advice | All |
 | `status` | Plan, usage and upstream freshness | All |
+| `get_developing` | Developing big events (a major hack, for example) as a cited synthesis: figures, who said what, and a dated timeline | Standard, Pro |
 | `get_story` | One story with every outlet's report, in 28 languages, including archived stories | Standard, Pro |
 | `get_sentiment_history` | Historical sentiment readings | Standard, Pro |
 | `changes_since` | Stories added, changed or merged since a cursor | Standard, Pro |
 | `search_stories` | Full-text story search ranked by relevance | Pro |
 
-Example questions: "What's moving crypto right now?", "Why is crypto news bearish today?", "Show every outlet's report on the top story in German."
+Example questions: "What happened in crypto yesterday?", "What's moving crypto right now?", "Why is crypto news bearish today?", "Show every outlet's report on the top story in German."
+
+New and updated tools reach connected clients through `notifications/tools/list_changed`; clients that support it refresh their tool list without reconnecting.
 
 ## Plans
 
