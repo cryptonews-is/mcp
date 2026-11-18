@@ -21,6 +21,7 @@ Every tool is read-only.
 | `latest_stories` | Ranked current stories, each with its coins, category, sentiment and how many outlets cover it | All |
 | `get_sentiment` | The news sentiment reading (15 minutes to 24 hours) and the stories driving it | All |
 | `get_market` | Market quotes, top coins, total market cap and coins named in current stories | All |
+| `get_coin` | One coin in one call: quote, rank and window changes, technicals verdict, latest stories that mention it and the sentiment of those stories | All |
 | `get_technicals` | Technical readings for ten large coins (trend, momentum, stretch; today, this week, this month), with the signals behind them on Standard and Pro. Signals, not advice | All |
 | `status` | Plan, usage and upstream freshness | All |
 | `get_developing` | Developing big events (a major hack, for example) as a cited synthesis: figures, who said what, and a dated timeline | Standard, Pro |
@@ -30,6 +31,8 @@ Every tool is read-only.
 | `search_stories` | Full-text story search ranked by relevance | Pro |
 
 Example questions: "What happened in crypto yesterday?", "What's moving crypto right now?", "Why is crypto news bearish today?", "Show every outlet's report on the top story in German."
+
+Prompts for clients that show them: `morning_briefing`, `coin_check` (a symbol) and `what_moved` (a window).
 
 New and updated tools reach connected clients through `notifications/tools/list_changed`; clients that support it refresh their tool list without reconnecting.
 
