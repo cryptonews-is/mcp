@@ -25,6 +25,7 @@ Every tool is read-only.
 | `get_technicals` | Technical readings for ten large coins (trend, momentum, stretch; today, this week, this month), with the signals behind them on Standard and Pro. Signals, not advice | All |
 | `status` | Plan, usage and upstream freshness | All |
 | `get_developing` | Developing big events (a major hack, for example) as a cited synthesis: figures, who said what, and a dated timeline | Standard, Pro |
+| `get_calendar` | Dated events coming up (unlocks, votes, hearings, launches, deadlines, macro releases), found in the news, with how firm each date is and the stories behind it | Standard, Pro |
 | `get_story` | One story with every outlet's report, in 28 languages, including archived stories | Standard, Pro |
 | `get_sentiment_history` | Historical sentiment readings | Standard, Pro |
 | `changes_since` | Stories added, changed or merged since a cursor | Standard, Pro |
