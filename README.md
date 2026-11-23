@@ -28,18 +28,18 @@ Every tool is read-only.
 | `get_calendar` | Dated events coming up (unlocks, votes, hearings, launches, deadlines, macro releases), found in the news, with how firm each date is and the stories behind it | Standard, Pro |
 | `get_story` | One story with every outlet's report, in 28 languages, including archived stories | Standard, Pro |
 | `get_sentiment_history` | Historical sentiment readings | Standard, Pro |
-| `get_impact` | What prices did after the news: for each story, the coin's price when it broke and its move 15 minutes, 1 hour, 4 hours and 24 hours later, with medians per coin. Past observations, not a forecast | Standard, Pro |
+| `get_impact` | What prices did after the news: for stories about a priced coin, the price when the story broke and its move 15 minutes, 1 hour, 4 hours and 24 hours later, with medians per coin. Past observations, not a forecast | Standard, Pro |
 | `changes_since` | Stories added, changed or merged since a cursor | Standard, Pro |
 | `search_stories` | Full-text story search ranked by relevance | Pro |
 
-On every story, on every plan:
+On live stories, on every plan:
 
 - **`evidence`**: how firm the story is (`reported`, `corroborated`, `confirmed`, `rumoured` or `disputed`), with its basis, stage, number of independent origins and first report. `get_story` adds the history of status changes.
 - **`lead`**: the outlet and language that reported it first, how long English coverage took, and `ahead_of_english` while no English outlet the service follows has reported it.
 
 Standard and Pro can filter `latest_stories` by `evidence`, `ahead_of_english` and `lead_language`; `search_stories` takes the same filters.
 
-**Replay (Pro):** pass `as_of` to `latest_stories`, `get_story`, `get_developing` or `get_sentiment` to read them as they stood at that moment, so a backtest cannot see the future. Recorded since 22 November 2026.
+**Replay (Pro):** pass `as_of` to `latest_stories`, `get_story`, `get_developing` or `get_sentiment` to read them as recorded at that moment, for backtests. Anything not recorded is marked in the response. Editions recorded since 22 November 2026.
 
 Example questions: "What happened in crypto yesterday?", "What's moving crypto right now?", "Why is crypto news bearish today?", "Show every outlet's report on the top story in German.", "Which stories were reported in Chinese before English today?", "How did ETH move after its last five high-importance stories?"
 
