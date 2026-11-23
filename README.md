@@ -13,7 +13,7 @@ This repository holds connection examples and listing metadata only. The service
 
 ## Tools
 
-Every tool is read-only.
+Every tool is read-only except `create_watch` and `delete_watch`, which save and remove your own watches and need an API key.
 
 | Tool | What it returns | Plans |
 | --- | --- | --- |
@@ -30,6 +30,10 @@ Every tool is read-only.
 | `get_sentiment_history` | Historical sentiment readings | Standard, Pro |
 | `get_impact` | What prices did after the news: for stories about a priced coin, the price when the story broke and its move 15 minutes, 1 hour, 4 hours and 24 hours later, with medians per coin. Past observations, not a forecast | Standard, Pro |
 | `changes_since` | Stories added, changed or merged since a cursor | Standard, Pro |
+| `list_watches` | Your saved filters (watches): 3 on Standard, 25 on Pro | Standard, Pro |
+| `get_watch_events` | The stories added or changed since a cursor that match your watches, one event per story, with the same gap markers as `changes_since` | Standard, Pro |
+| `create_watch` | Save a filter over the change feed: coins, categories, prominence, coverage, terms, evidence status, first-report language, or a developing thread. API key only | Standard, Pro |
+| `delete_watch` | Delete one of your watches. API key only | Standard, Pro |
 | `search_stories` | Full-text story search ranked by relevance | Pro |
 
 On live stories, on every plan:

@@ -9,4 +9,4 @@ This is a hosted remote server. Do not clone, build or run anything.
    - **API key:** if the user has a key (`cnis_live_...`) from https://mcp.cryptonews.is/account, send it as the header `Authorization: Bearer <key>`. Never write the key into a shared file; read it from an environment variable such as `CRYPTONEWS_API_KEY`.
 3. Check the connection by calling the `status` tool. It returns the plan, usage and data freshness.
 
-Every tool is read-only. Free accounts can use `get_brief`, `latest_stories`, `get_sentiment`, `get_market`, `get_coin`, `get_technicals` and `status`; other tools answer with the plan they need.
+Every tool is read-only except `create_watch` and `delete_watch`, which need an API key (an OAuth connection can list and read watches, not change them). Free accounts can use `get_brief`, `latest_stories`, `get_sentiment`, `get_market`, `get_coin`, `get_technicals` and `status`; other tools answer with the plan they need.
