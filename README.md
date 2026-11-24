@@ -39,7 +39,7 @@ Every tool is read-only except `create_watch` and `delete_watch`, which save and
 On live stories, on every plan:
 
 - **`evidence`**: how firm the story is (`reported`, `corroborated`, `confirmed`, `rumoured` or `disputed`), with its basis, stage, number of independent origins and first report. `get_story` adds the history of status changes.
-- **`lead`**: the outlet and language that reported it first, how long English coverage took, and `ahead_of_english` while no English outlet the service follows has reported it.
+- **`lead`**: the outlet and language that reported it first, how long English coverage took, and `ahead_of_english` once 30 minutes have passed with no report from an English outlet the service follows. The flag is withheld where the service cannot be sure, so `flag_eligible` says whether a story can carry it.
 
 Standard and Pro can filter `latest_stories` by `evidence`, `ahead_of_english` and `lead_language`; `search_stories` takes the same filters.
 
