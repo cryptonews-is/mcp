@@ -1,5 +1,7 @@
 # cryptonews.is MCP server
 
+[![cryptonews.is MCP connector](https://glama.ai/mcp/connectors/is.cryptonews/news/badges/score.svg)](https://glama.ai/mcp/connectors/is.cryptonews/news)
+
 <img src="assets/icon-400.png" alt="cryptonews.is" width="96" align="right">
 
 Live crypto news as data for agents. cryptonews.is reads over 1,000 sources, groups their reports into stories, summarises each story in 28 languages, and scores the tone of the news minute by minute. This remote MCP server gives an agent the same data.
